@@ -1,0 +1,14 @@
+# This is the Zuul tenant config file.
+
+- tenant:
+    name: superproject-example
+    source:
+      gerrit:
+        config-projects:
+          - project-config
+        untrusted-projects:
+          - superproject:
+            configure-other-projects: true
+          - submodule1
+          - submodule2
+          - submodule3
